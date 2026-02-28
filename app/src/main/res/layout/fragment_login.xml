@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,7 +14,7 @@
         android:background="@drawable/sh_bg_header_police_blue"
         android:paddingHorizontal="16dp"
         android:paddingVertical="36dp"
-        android:text="Vamos, iniciar sesión"
+        android:text="@string/vamos_login"
         android:textColor="@color/flesh"
         android:textSize="18sp"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,17 +23,18 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="80dp"
         android:fontFamily="@font/poppins_regular"
         android:paddingHorizontal="48dp"
         android:paddingVertical="8dp"
         android:background="@drawable/sh_bg_btn_carmine_pink"
+        android:gravity="center"
         android:text="@string/iniciar_sesion"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         android:translationZ="1dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +43,7 @@
     <TextView
         android:id="@+id/tvRegistrar"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginStart="186dp"
         android:layout_marginEnd="36dp"
         android:layout_marginTop="80dp"
@@ -49,12 +51,13 @@
         android:paddingHorizontal="56dp"
         android:paddingVertical="8dp"
         android:background="@drawable/sh_bg_btn_bright_gray"
+        android:gravity="center"
         android:clickable="true"
         android:focusable="true"
         android:text="@string/registrar"
         android:textAllCaps="false"
         android:textColor="@color/police_blue"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -130,6 +133,7 @@
         app:layout_constraintTop_toBottomOf="@id/tvOlvidaste" />
 
     <View
+        android:id="@+id/v01"
         android:layout_width="96dp"
         android:layout_height="1dp"
         android:background="@color/carmine_pink"
@@ -151,11 +155,80 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Inicia sesión con"
+        android:text="O inicia sesión con"
         android:textStyle="bold"
         android:textColor="@color/police_blue"
         app:layout_constraintTop_toBottomOf="@id/btnIniciar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ivFacebook"
+        android:layout_width="108dp"
+        android:layout_height="84dp"
+        android:background="@drawable/sh_bg_btn_flesh"
+        android:padding="16dp"
+        android:layout_margin="24dp"
+        android:src="@drawable/ic_facebook"
+        android:contentDescription="@string/content_description"
+
+        app:layout_constraintTop_toBottomOf="@id/v01"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ivGoogle"
+        android:layout_width="108dp"
+        android:layout_height="84dp"
+        android:background="@drawable/sh_bg_btn_flesh"
+        android:padding="16dp"
+        android:layout_margin="24dp"
+        android:src="@drawable/ic_google_plus"
+        android:contentDescription="@string/content_description"
+
+        app:layout_constraintTop_toBottomOf="@id/v01"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ivApple"
+        android:layout_width="108dp"
+        android:layout_height="84dp"
+        android:background="@drawable/sh_bg_btn_flesh"
+        android:padding="16dp"
+        android:layout_margin="24dp"
+        android:src="@drawable/ic_apple"
+        android:contentDescription="@string/content_description"
+
+        app:layout_constraintTop_toBottomOf="@id/v01"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿No tienes cuenta?"
+                android:textStyle="bold"
+                android:textColor="@color/police_blue"
+                />
+
+            <TextView
+                android:id="@+id/tvRegistrar02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="Registrate"
+                android:textStyle="bold"
+                android:textColor="@color/carmine_pink"
+                />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

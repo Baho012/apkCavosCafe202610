@@ -9,4 +9,8 @@
     <string name="correo">Correo</string>
     <string name="passwordd">Contraseña</string>
     <string name="olvidastes_passwordd">¿Olvidaste contraseña?</string>
+    <string name="content_description">contentDescription</string>
+    <string name="vamos_login">Vamos, iniciar sesión</string>
+    <string name="confirm_passwordd">Confirmar Contraseña</string>
+    <string name="registrarse">Registrarse</string>
 </resources>
